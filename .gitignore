@@ -1,2 +1,2 @@
-npm_modules/
-/config/keys.js
+/npm_modules
+config/keys.js
