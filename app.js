@@ -36,9 +36,15 @@ app.get('/', (req, res) =>{
    res.render('home', { user: req.user}); 
 });
 
+//create meetups route
 app.get('/meetups', (req, res) =>{
     res.render('meetups', { user: req.user}); 
  });
+
+ //create forum route
+ app.get('/forums', (req,res)=>{
+     res.render('forums', {user: req.user});
+ })
 
 app.listen(3000, () => {
     console.log('app now listening for requests on port 3000');
