@@ -27,6 +27,7 @@ passport.use(
 			if(currentUser){
 				//already have the user
 				console.log('user is: ', currentUser);
+				console.log(profile);
 				done(null,currentUser)
 			}else{
 				//if not, create user in our db
