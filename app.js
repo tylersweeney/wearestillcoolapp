@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -34,12 +35,12 @@ app.use('/profile', profileRoutes);
 
 //create home route
 app.get('/', (req, res) =>{
-   res.render('home', { user: req.user}); 
+   res.render('home', { user: req.user});
 });
 
 //create meetups route
 app.get('/meetups', (req, res) =>{
-    res.render('meetups', { user: req.user}); 
+    res.render('meetups', { user: req.user});
  });
 
  //create forum route
