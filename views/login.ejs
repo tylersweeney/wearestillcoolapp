@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>We Are Still Cool | Login</title>
         <style>
             body{
                 font-family: arial;
@@ -48,9 +48,9 @@
         <nav>
             <ul>
                     <% if (user) {%>
-                        <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="/auth/logout">Log Out</a></li>
                         <%} else {%>
-                        <li><a href="/auth/login">Login</a></li>
+                        <li><a href="/auth/login">Log In</a></li>
                         <%} %>
                         <li><a href="/">Homepage</a></li>
                         <li><a href="/profile">Profile</a></li>
@@ -59,7 +59,7 @@
             </ul>
         </nav>
         <header>
-            <h1>Login Using...</h1>
+            <h1>Log In Using...</h1>
         </header>
         <main>
             <a class="google-btn" href="/auth/google">Google+</a>
