@@ -10,5 +10,6 @@ module.exports = {
     },
     session: {
         cookieKey:"roodoodoodadoo"
-    }
+    },
+    PRODUCTION: process.env.NODE_ENV === 'production',
 };

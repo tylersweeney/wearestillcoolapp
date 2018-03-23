@@ -43,11 +43,20 @@ app.get('/meetups', (req, res) =>{
     res.render('meetups', { user: req.user});
  });
 
- //create forum route
- app.get('/forums', (req,res)=>{
-     res.render('forums', {user: req.user});
- })
+//create forum route
+app.get('/forums', (req,res)=>{
+   res.render('forums', {user: req.user});
+});
+
+// const serverConfigs = require('./config/serverConfig');
+
+require('./backend/express')(app, keys);
+app.use(express.static('public'));
 
 app.listen(PORT, () => {
     console.log('app now listening for requests on port 3000');
 });
+
+// const react = require('react');
+// const { hot } = require('react-hot-loader');
+// module.exports = hot(module)(app);
