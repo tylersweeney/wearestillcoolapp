@@ -46,7 +46,7 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' },
-          { loader: 'postcss-loader?sourceMap=inline' },
+          // { loader: 'postcss-loader?sourceMap=inline' },
         ],
       },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
