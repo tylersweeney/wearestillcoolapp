@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import styles from './styles';
-import PropTypes from 'prop-types';
 
 import Button from 'Components/Button';
 
@@ -36,9 +35,9 @@ Tag.defaultProps = {
 };
 
 Tag.propTypes = {
-  name: PropTypes.string.isRequired,
-  withRemove: PropTypes.bool,
-  removeAction: PropTypes.func,
+  name: React.PropTypes.string.isRequired,
+  withRemove: React.PropTypes.bool,
+  removeAction: React.PropTypes.func,
 };
 
 export default Tag;

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router-dom';
+import { Link, IndexLink } from 'react-router';
 import classnames from 'classnames';
 import _ from 'lodash';
 import styles from './styles';
-import PropTypes from 'prop-types';
 
 class NavigationBar extends Component {
   render() {
@@ -60,7 +59,7 @@ NavigationBar.defaultProps = {
 };
 
 NavigationBar.propTypes = {
-  navigationLinks: PropTypes.array,
+  navigationLinks: React.PropTypes.array,
 };
 
 export default NavigationBar;

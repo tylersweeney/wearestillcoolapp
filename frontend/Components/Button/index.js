@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './styles';
 
@@ -46,13 +45,13 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['default', 'outline']),
-  fullWidth: PropTypes.bool,
-  noUppercase: PropTypes.bool,
-  alwaysActive: PropTypes.bool,
-  className: PropTypes.string,
-  style: PropTypes.object,
-  onClick: PropTypes.func,
+  type: React.PropTypes.oneOf(['default', 'outline']),
+  fullWidth: React.PropTypes.bool,
+  noUppercase: React.PropTypes.bool,
+  alwaysActive: React.PropTypes.bool,
+  className: React.PropTypes.string,
+  style: React.PropTypes.object,
+  onClick: React.PropTypes.func,
 };
 
 export default Button;

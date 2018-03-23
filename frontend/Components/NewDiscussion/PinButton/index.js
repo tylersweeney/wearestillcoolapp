@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import styles from './styles';
-import PropTypes from 'prop-types';
 
 import Button from 'Components/Button';
 
@@ -55,8 +54,8 @@ PinButton.defaultProps = {
 };
 
 PinButton.propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.bool,
+  onChange: React.PropTypes.func,
+  value: React.PropTypes.bool,
 };
 
 export default PinButton;

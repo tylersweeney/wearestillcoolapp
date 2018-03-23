@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import Moment from 'moment';
 import styles from './styles';
-import PropTypes from 'prop-types';
 
 import DiscussionBox from './DiscussionBox';
 
@@ -97,13 +96,13 @@ FeedBox.defaultProps = {
 };
 
 FeedBox.propTypes = {
-  type: PropTypes.oneOf(['general', 'pinned']),
-  loading: PropTypes.bool,
-  discussions: PropTypes.array,
-  currentForum: PropTypes.string,
-  activeSortingMethod: PropTypes.string,
-  onChangeSortingMethod: PropTypes.func,
-  userProfile: PropTypes.bool,
+  type: React.PropTypes.oneOf(['general', 'pinned']),
+  loading: React.PropTypes.bool,
+  discussions: React.PropTypes.array,
+  currentForum: React.PropTypes.string,
+  activeSortingMethod: React.PropTypes.string,
+  onChangeSortingMethod: React.PropTypes.func,
+  userProfile: React.PropTypes.bool,
 };
 
 export default FeedBox;

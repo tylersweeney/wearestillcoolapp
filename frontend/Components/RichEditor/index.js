@@ -13,7 +13,6 @@ import styles from './styles';
 import Button from 'Components/Button';
 import BlockStyleControls from './BlockStyleControls';
 import InlineStyleControls from './InlineStyleControls';
-import PropTypes from 'prop-types';
 
 class RichEditor extends Component {
   constructor(props) {
@@ -168,11 +167,11 @@ RichEditor.defaultProps = {
 };
 
 RichEditor.propTypes = {
-  readOnly: PropTypes.bool,
-  value: PropTypes.any,
-  type: PropTypes.oneOf(['newDiscussion', 'newOpinion']),
-  onChange: PropTypes.func,
-  onSave: PropTypes.func,
+  readOnly: React.PropTypes.bool,
+  value: React.PropTypes.any,
+  type: React.PropTypes.oneOf(['newDiscussion', 'newOpinion']),
+  onChange: React.PropTypes.func,
+  onSave: React.PropTypes.func,
 };
 
 export default RichEditor;

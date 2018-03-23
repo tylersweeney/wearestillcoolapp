@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import _ from 'lodash';
 import styles from './styles';
-import PropTypes from 'prop-types';
 
 import Button from 'Components/Button';
 import Tag from 'Components/Tag';
@@ -141,9 +140,9 @@ TagsInput.defaultProps = {
 };
 
 TagsInput.propTypes = {
-  value: PropTypes.array,
-  maxTagCount: PropTypes.number,
-  onChange: PropTypes.func,
+  value: React.PropTypes.array,
+  maxTagCount: React.PropTypes.number,
+  onChange: React.PropTypes.func,
 };
 
 export default TagsInput;
