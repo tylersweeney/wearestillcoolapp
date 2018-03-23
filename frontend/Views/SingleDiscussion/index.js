@@ -136,7 +136,7 @@ class SingleDiscussion extends Component {
     } = discussion;
 
     const {
-      avatarUrl,
+      thumbnail,
       name,
       username,
     } = discussion.user;
@@ -157,7 +157,7 @@ class SingleDiscussion extends Component {
 
         <Discussion
           id={_id}
-          userAvatar={avatarUrl}
+          userAvatar={thumbnail}
           userName={name}
           userGitHandler={username}
           discTitle={title}
@@ -187,7 +187,7 @@ class SingleDiscussion extends Component {
             <Opinion
               key={opinion._id}
               opinionId={opinion._id}
-              userAvatar={opinion.user.avatarUrl}
+              userAvatar={opinion.user.thumbnail}
               userName={opinion.user.name}
               userGitHandler={opinion.user.username}
               opDate={opinion.date}

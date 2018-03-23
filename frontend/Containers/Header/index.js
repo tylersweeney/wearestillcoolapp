@@ -33,7 +33,7 @@ class Header extends Component {
       authenticated,
       name,
       username,
-      avatarUrl,
+      thumbnail,
     } = this.props.user;
 
     return (
@@ -44,7 +44,7 @@ class Header extends Component {
             signedIn={authenticated}
             userName={name || username}
             gitHandler={username}
-            avatar={avatarUrl}
+            avatar={thumbnail}
           />
         </div>
         <NavigationBar

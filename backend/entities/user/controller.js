@@ -46,7 +46,7 @@ const signInViaGithub = (gitProfile) => {
           // update the user with latest git profile info
           user.name = gitProfile.displayName;
           user.username = gitProfile.username;
-          user.avatarUrl = gitProfile._json.avatar_url;
+          user.thumbnail = gitProfile._json.avatar_url;
           user.email = email;
           user.github.id = gitProfile._json.id,
           user.github.url = gitProfile._json.html_url,
@@ -78,7 +78,7 @@ const signInViaGithub = (gitProfile) => {
             const newUser = new User({
               name: gitProfile.displayName,
               username: gitProfile.username,
-              avatarUrl: gitProfile._json.avatar_url,
+              thumbnail: gitProfile._json.avatar_url,
               email: email,
               role: assignAdmin ? 'admin' : 'user',
               github: {

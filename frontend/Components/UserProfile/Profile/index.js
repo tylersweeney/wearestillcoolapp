@@ -8,13 +8,13 @@ class Profile extends Component {
       name,
       gitHandler,
       location,
-      avatarUrl,
+      thumbnail,
     } = this.props;
 
     return (
       <div className={styles.container}>
         <div className={styles.avatarContainer}>
-          <img className={styles.avatar} src={avatarUrl} alt={`${name} avatar`} />
+          <img className={styles.avatar} src={thumbnail} alt={`${name} avatar`} />
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.name}>{ name }</div>
@@ -30,14 +30,14 @@ Profile.defaultProps = {
   name: 'Hello World',
   gitHandler: 'helloWorld',
   location: 'Somewhere in the world',
-  avatarUrl: 'https://google.com',
+  thumbnail: 'https://google.com',
 };
 
 Profile.propTypes = {
   name: React.PropTypes.string,
   gitHandler: React.PropTypes.string,
   location: React.PropTypes.string,
-  avatarUrl: React.PropTypes.string,
+  thumbnail: React.PropTypes.string,
 };
 
 export default Profile;

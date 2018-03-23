@@ -47,7 +47,7 @@ class UserProfile extends Component {
     const {
       name,
       username,
-      avatarUrl,
+      thumbnail,
       github,
       discussions,
     } = profile;
@@ -69,7 +69,7 @@ class UserProfile extends Component {
             name={name}
             gitHandler={username}
             location={github.location}
-            avatarUrl={avatarUrl}
+            thumbnail={thumbnail}
           />
 
           <FeedBox
