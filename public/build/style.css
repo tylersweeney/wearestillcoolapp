@@ -14,11 +14,6 @@
 *{
     box-sizing:border-box
 }
-body{
-    font-size:14px;
-    line-height:22px;
-    font-family:Lato,helvetica,arial,sans-serif
-}
 .appLayout__constraintWidth___em4FP{
     margin:0 auto;
     min-width:320px;
