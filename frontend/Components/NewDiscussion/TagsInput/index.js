@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import _ from 'lodash';
 import styles from './styles';
@@ -140,9 +141,9 @@ TagsInput.defaultProps = {
 };
 
 TagsInput.propTypes = {
-  value: React.PropTypes.array,
-  maxTagCount: React.PropTypes.number,
-  onChange: React.PropTypes.func,
+  value: PropTypes.array,
+  maxTagCount: PropTypes.number,
+  onChange: PropTypes.func,
 };
 
 export default TagsInput;

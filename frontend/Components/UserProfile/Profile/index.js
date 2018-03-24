@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './styles.css';
 
@@ -34,10 +35,10 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
-  name: React.PropTypes.string,
-  gitHandler: React.PropTypes.string,
-  location: React.PropTypes.string,
-  thumbnail: React.PropTypes.string,
+  name: PropTypes.string,
+  gitHandler: PropTypes.string,
+  location: PropTypes.string,
+  thumbnail: PropTypes.string,
 };
 
 export default Profile;

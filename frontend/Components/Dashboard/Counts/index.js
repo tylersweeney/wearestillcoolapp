@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './styles';
 
@@ -24,8 +25,8 @@ Counts.defaultProps = {
 };
 
 Counts.propTypes = {
-  count: React.PropTypes.number,
-  label: React.PropTypes.string,
+  count: PropTypes.number,
+  label: PropTypes.string,
 };
 
 export default Counts;

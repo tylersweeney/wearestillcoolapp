@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 import onClickOutside from 'react-onclickoutside';
@@ -98,10 +99,10 @@ UserMenu.defaultProps = {
 };
 
 UserMenu.propTypes = {
-  signedIn: React.PropTypes.bool.isRequired,
-  userName: React.PropTypes.string,
-  gitHandler: React.PropTypes.string,
-  avatar: React.PropTypes.string,
+  signedIn: PropTypes.bool.isRequired,
+  userName: PropTypes.string,
+  gitHandler: PropTypes.string,
+  avatar: PropTypes.string,
 };
 
 export default onClickOutside(UserMenu);

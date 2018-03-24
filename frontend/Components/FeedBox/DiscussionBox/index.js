@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Moment from 'moment';
 import styles from './styles';
@@ -64,16 +65,16 @@ DiscussionBox.defaultProps = {
 };
 
 DiscussionBox.propTypes = {
-  discussionId: React.PropTypes.number,
-  voteCount: React.PropTypes.number,
-  userName: React.PropTypes.string,
-  userGitHandler: React.PropTypes.string,
-  discussionTitle: React.PropTypes.string,
-  time: React.PropTypes.any,
-  opinionCount: React.PropTypes.number,
-  tags: React.PropTypes.array,
-  link: React.PropTypes.string,
-  userProfile: React.PropTypes.bool,
+  discussionId: PropTypes.number,
+  voteCount: PropTypes.number,
+  userName: PropTypes.string,
+  userGitHandler: PropTypes.string,
+  discussionTitle: PropTypes.string,
+  time: PropTypes.any,
+  opinionCount: PropTypes.number,
+  tags: PropTypes.array,
+  link: PropTypes.string,
+  userProfile: PropTypes.bool,
 };
 
 export default DiscussionBox;
