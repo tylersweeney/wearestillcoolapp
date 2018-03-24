@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Editor,
   EditorState,
@@ -167,11 +168,11 @@ RichEditor.defaultProps = {
 };
 
 RichEditor.propTypes = {
-  readOnly: React.PropTypes.bool,
-  value: React.PropTypes.any,
-  type: React.PropTypes.oneOf(['newDiscussion', 'newOpinion']),
-  onChange: React.PropTypes.func,
-  onSave: React.PropTypes.func,
+  readOnly: PropTypes.bool,
+  value: PropTypes.any,
+  type: PropTypes.oneOf(['newDiscussion', 'newOpinion']),
+  onChange: PropTypes.func,
+  onSave: PropTypes.func,
 };
 
 export default RichEditor;

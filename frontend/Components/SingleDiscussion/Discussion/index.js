@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import moment from 'moment';
 import classnames from 'classnames';
@@ -107,21 +108,21 @@ Discussion.defaultProps = {
 };
 
 Discussion.propTypes = {
-  id: React.PropTypes.any,
-  userAvatar: React.PropTypes.string,
-  userName: React.PropTypes.string,
-  userGitHandler: React.PropTypes.string,
-  discTitle: React.PropTypes.string,
-  discDate: React.PropTypes.any,
-  discContent: React.PropTypes.any,
-  tags: React.PropTypes.array,
-  favoriteCount: React.PropTypes.number,
-  favoriteAction: React.PropTypes.func,
-  userFavorited: React.PropTypes.bool,
-  toggleingFavorite: React.PropTypes.bool,
-  allowDelete: React.PropTypes.bool,
-  deletingDiscussion: React.PropTypes.bool,
-  deleteAction: React.PropTypes.func,
+  id: PropTypes.any,
+  userAvatar: PropTypes.string,
+  userName: PropTypes.string,
+  userGitHandler: PropTypes.string,
+  discTitle: PropTypes.string,
+  discDate: PropTypes.any,
+  discContent: PropTypes.any,
+  tags: PropTypes.array,
+  favoriteCount: PropTypes.number,
+  favoriteAction: PropTypes.func,
+  userFavorited: PropTypes.bool,
+  toggleingFavorite: PropTypes.bool,
+  allowDelete: PropTypes.bool,
+  deletingDiscussion: PropTypes.bool,
+  deleteAction: PropTypes.func,
 };
 
 export default Discussion;

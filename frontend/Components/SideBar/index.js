@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import styles from './styles';
 
@@ -28,7 +29,7 @@ SideBar.defaultProps = {
 };
 
 SideBar.propTypes = {
-  currentForum: React.PropTypes.string,
+  currentForum: PropTypes.string,
 };
 
 export default SideBar;

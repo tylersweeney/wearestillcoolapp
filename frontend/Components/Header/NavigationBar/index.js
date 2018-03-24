@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link, IndexLink } from 'react-router';
 import classnames from 'classnames';
 import _ from 'lodash';
@@ -59,7 +60,7 @@ NavigationBar.defaultProps = {
 };
 
 NavigationBar.propTypes = {
-  navigationLinks: React.PropTypes.array,
+  navigationLinks: PropTypes.array,
 };
 
 export default NavigationBar;
