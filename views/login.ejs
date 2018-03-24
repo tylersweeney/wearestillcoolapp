@@ -2,39 +2,11 @@
 <html>
     <head>
         <title>We Are Still Cool | Login</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="../styles.css" type="text/css">
         <style>
-            body{
-                font-family: arial;
-                margin: 0;
-            }
-            nav{
-                background: #ff5353;
-                padding: 20px 10px;
-            }
-            nav ul{
-                max-width: 960px;
-                margin: 0 auto;
-                padding: 0;
-            }
-            nav li{
-                list-style-type: none;
-                display: inline-block;
-                margin: 0 10px 0 0;
-            }
-            nav a{
-                color: #fff;
-                font-size: 14px;
-                background: rgba(255,255,255,0.2);
-                text-decoration: none;
-                padding: 10px;
-                display: block;
-            }
-            main, header{
-                max-width: 960px;
-                margin: 30px auto;
-                padding: 0 10px;
-                color: #333;
-            }
             .google-btn{
                 color: #fff;
                 text-decoration: none;
@@ -45,6 +17,7 @@
         </style>
     </head>
     <body>
+        <h1 class="app-title">We Are Still Cool App</h1>
         <nav>
             <ul>
                     <% if (user) {%>
@@ -56,8 +29,7 @@
                         <li><a href="/profile">Profile</a></li>
                         <li><a href="/meetups">Meetups</a></li>
                         <li><a href="/forums">Forums</a></li>
-                        <li><a href="/reviews"></a></li>
-                        li><h1>We Are Still Cool App</h1></li>
+                        <li><a href="/reviews">Reviews</a></li>
             </ul>
         </nav>
         <header>
