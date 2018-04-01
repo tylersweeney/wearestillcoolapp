@@ -3,7 +3,7 @@
  */
 const path = require('path');
 const webpack = require('webpack');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // define paths
@@ -14,6 +14,7 @@ const sharedStylesPath = path.resolve(__dirname, '../frontend', 'SharedStyles');
 const componentsPath = path.resolve(__dirname, '../frontend', 'Components');
 const containersPath = path.resolve(__dirname, '../frontend', 'Containers');
 const viewsPath = path.resolve(__dirname, '../frontend', 'Views');
+
 
 /**
  * webpack production configuration
@@ -35,7 +36,6 @@ module.exports = {
       {
         test: /\.js$/,
         use: [
-          // { loader: 'react-hot-loader/webpack' },
           { loader: 'babel-loader' },
         ],
         exclude: [nodeModulesPath],
@@ -51,49 +51,37 @@ module.exports = {
               localIdentName: '[name]__[local]___[hash:base64:5]'
             }
           },
+          { loader: 'less-loader' }
         ],
       },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
       { test: /\.svg$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' },
     ],
-
-    // loaders: [
-    //   {
-    //     test: /\.js$/,
-    //     loaders: [ 'react-hot-loader', 'babel-loader' ],
-    //     exclude: [nodeModulesPath],
-    //   },
-    //   {
-    //     test: /\.css$/,
-    //     loader: ExtractTextPlugin.extract(
-    //       'style-loader',
-    //       'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap=inline'
-    //     ),
-    //   },
-    //   { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
-    //   { test: /\.svg$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' },
-    // ],
-
   },
-
-  postcss: [ require('autoprefixer'), require('postcss-nesting') ],
 
   plugins: [
     // new webpack.optimize.DedupePlugin(),
     // new webpack.optimize.OccurrenceOrderPlugin(),
     // new webpack.optimize.UglifyJsPlugin(),
 
-    // new ExtractTextPlugin('style.css', { allChunks: true }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        context: __dirname,
+        postcss: [ autoprefixer]
+      }
     })
+
   ],
 
   resolve: {
-    extensions: ['', '.js', '.css'],
+    extensions: ['.js', '.css'],
     alias: {
       SharedStyles: sharedStylesPath,
       Components: componentsPath,
