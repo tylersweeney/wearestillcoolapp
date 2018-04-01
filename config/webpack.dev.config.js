@@ -3,6 +3,7 @@
  */
 const path = require('path');
 const webpack = require('webpack');
+// const nodeExternals = require('webpack-node-externals');
 
 // define paths
 const nodeModulesPath = path.resolve(__dirname, '../node_modules');
@@ -18,6 +19,7 @@ const viewsPath = path.resolve(__dirname, '../frontend', 'Views');
  */
 module.exports = {
   target  : 'web',
+  // externals : [nodeExternals()],  // exclude stuff in node_modules
   devtool: 'inline-source-map',
 
   entry: [
@@ -36,7 +38,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: [
-          // { loader: 'react-hot-loader' },
+          // { loader: 'react-hot-loader/webpack' },
           { loader: 'babel-loader' },
         ],
         exclude: [nodeModulesPath],
@@ -45,8 +47,22 @@ module.exports = {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' },
+          // 'style-loader',
+          // { loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' },
+          { loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
           // { loader: 'postcss-loader?sourceMap=inline' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: 'inline'
+            }
+          },
         ],
       },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },

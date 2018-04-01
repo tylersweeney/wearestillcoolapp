@@ -26,6 +26,7 @@ class AppContainer extends Component {
 
     // set current forum based on route
     const currentForum = params.forum || '';
+    // const currentForum = 'welcome';
     updateCurrentForum(currentForum);
   }
 
@@ -38,7 +39,10 @@ class AppContainer extends Component {
     } = this.props;
 
     let newCurrentForum = '';
-    if (params.forum) newCurrentForum = params.forum;
+    if (params.forum) {
+      if(params.forum === 'forums') newCurrentForum = 'welcome';
+      else newCurrentForum = params.forum;
+    }
     else if (forums) newCurrentForum = forums[0].forum_slug;
 
     // update current forum if necessery
@@ -52,10 +56,10 @@ class AppContainer extends Component {
     if (forums) {
       return (
         <div>
-          <Helmet><title>ReForumz</title></Helmet>
+          <Helmet><title>We Are Still Cool | Forums</title></Helmet>
 
           <div className={styles.gitForkTag}>
-            <a className={styles.gitLink} href="https://github.com/shoumma/ReForum" target="_blank">Fork on Github</a>
+            <a className={styles.gitLink} href="https://www.youtube.com/watch?v=ZZ5LpwO-An4&list=PL69095DB09E530EA9" target="_blank">Still Cool!</a>
           </div>
 
           <Header />
