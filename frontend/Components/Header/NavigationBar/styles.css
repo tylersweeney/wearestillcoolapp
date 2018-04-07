@@ -23,14 +23,15 @@
   line-height: 38px;
   text-decoration: none;
   font-size: 14px;
+  font-weight: bold;
   color: secondaryFontColor;
   user-select: none;
   transition: color 0.3s;
 }
 
-.links:hover { color: primaryFontColor; }
+.links:hover { color: #007ACC; }
 
 .linkActive {
-  color: primaryFontColor;
+  color: #007ACC;
   background-color: #f9f9f9;
 }

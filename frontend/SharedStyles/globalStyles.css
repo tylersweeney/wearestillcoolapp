@@ -3,7 +3,7 @@
  */
 @value themeColor: #F1C40F;
 @value primaryFontColor: #000;
-@value secondaryFontColor: #999;
+@value secondaryFontColor: #333;
 @value borderColor: #e8e8e8;
 @value backShade: #f9f9f9;
 
@@ -27,4 +27,8 @@ body {
 /*  font-size: 14px;
   line-height: 20px;
   font-family: 'Lato', helvetica, arial, sans-serif;*/
+}
+
+a {
+  /*color: #e6f5ff;*/
 }
