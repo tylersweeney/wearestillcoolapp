@@ -17,7 +17,7 @@
                 <%} else {%>
                     <li><a href="/auth/login">Log In</a></li>
                 <%} %>
-                <li><a href="/">Homepage</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/profile">Profile</a></li>
                 <li><a href="/meetups">Meetups</a></li>
                 <li><a href="/forums">Forums</a></li>
@@ -25,11 +25,16 @@
             </ul>
         </nav>
         <header>
-            <h1>Welcome to your profile, <%=user.username %></h1>
+            <h1>Welcome to your profile, <%=user.username %>.</h1>
         </header>
         <main>
             <img src="<%= user.thumbnail %>"/>
             <p>Extra information about you.</p>
+            <p><%= user.gender %></p>
+            <p><%= user.email %></p>
+            <p><%= user.url %></p>
+            <p><%= user.org %></p>
+            <p><%= user.title %></p>
         </main>
 
     </body>
