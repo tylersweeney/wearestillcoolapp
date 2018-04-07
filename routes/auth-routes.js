@@ -19,8 +19,9 @@ router.get('/google', passport.authenticate('google', {
 
 //callback route for google to redirect to
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-    // res.send(req.user);
-    res.redirect(req.originalUrl);
-})
+    // send user back to previous page or to their profile
+    res.redirect(req.session.returnTo || '/profile');
+    delete req.session.returnTo;
+});
 
 module.exports = router;

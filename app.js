@@ -45,6 +45,7 @@ app.get('/meetups', (req, res) =>{
 
 //create forum route
 app.get('/forums', (req,res)=>{
+   req.session.returnTo = req.path;
    res.render('forums', {user: req.user});
 });
 
