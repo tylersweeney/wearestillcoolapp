@@ -67,3 +67,11 @@ a {
   background: #007ACC;
   line-height: 2em;
 }
+
+img.fullscreen {
+  width: 100%;
+}
+
+span.label {
+  font-weight: bold;
+}
