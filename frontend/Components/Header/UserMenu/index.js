@@ -38,16 +38,17 @@ class UserMenu extends Component {
             <i className={classnames('fa fa-close')}></i>
           </Button>
 
-          { !signedIn && <a className={styles.signInLink} href={'/api/user/authViaGitHub'}>
+          {/*{ !signedIn && <a className={styles.signInLink} href={'/api/user/authViaGitHub'}>*/}
+          { !signedIn && <a className={styles.signInLink} href={'/auth/google'}>
             <Button className={styles.gitLoginBtn} alwaysActive>
-              <i className={classnames('fa fa-github-alt', styles.subMenuOcto)}></i>
-              <span className={styles.btnLabel}>With GitHub</span>
+              <i className={classnames('fa fa-google-plus', styles.subMenuOcto)}></i>
+              <span className={styles.btnLabel}>With Google+</span>
             </Button>
           </a> }
 
-          { signedIn && <span onClick={this.toggleSubMenu}><Link className={styles.subMenuItem} to={`/user/${gitHandler}`}>My Profile</Link></span> }
+          { signedIn && <span onClick={this.toggleSubMenu}><a className={styles.subMenuItem} href={`/profile`}>My Profile</a></span> }
           {/* { signedIn && <a className={styles.subMenuItem} href={'#'}>Settings</a> } */}
-          { signedIn && <a className={styles.subMenuItem} href={'/api/user/signout'}>Sign Out</a> }
+          { signedIn && <a className={styles.subMenuItem} href={'/auth/logout'}>Log Out</a> }
         </div>
       );
     }
@@ -82,7 +83,7 @@ class UserMenu extends Component {
           className={classnames(styles.signInBtn, styles.title)}
           onClick={this.toggleSubMenu}
         >
-          Sign Up / Sign In
+          Sign Up / Log In
         </Button>
 
         {this.renderSubMenu()}
