@@ -8,6 +8,7 @@
 .container {
   padding: 20px 10px 0px 10px;
   position: relative;
+  background-color: rgba(255, 255, 255, .6);
 }
 
 .infoContainer {
@@ -40,7 +41,7 @@
     & .gitHandler {
       margin-left: 15px;
       text-decoration: none;
-      color: secondaryFontColor;
+      color: #333333;
       transition: color 0.3s;
       &:hover { color: primaryFontColor; }
 
