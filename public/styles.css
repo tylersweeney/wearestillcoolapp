@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Averia+Libre:300|Emilys+Candy|Raleway|Lato');
+
 body {
   /*font-family: arial;*/
   font-family: 'Lato', helvetica, arial, sans-serif;
-  font-size: 14px;
+  font-size: 1.1em;
   line-height: 1.15em;
   margin: 0;
+  background: #e6f5ff;
+  background-image: url("notebook.png");
+  background-repeat: repeat;
 }
 nav {
-  background: #ff5353;
+  background: #4db8ff;
   padding: 20px 10px;
 }
 nav ul {
@@ -21,7 +26,7 @@ nav li {
 nav a {
   color: #fff;
   font-size: 14px;
-  background: rgba(255,255,255,0.2);
+  background: #007acc;
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -37,5 +42,28 @@ main, header {
   float: right;
   display: inline-block;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 40px;
+  font-family: 'Emilys Candy', cursive;
+  text-shadow: 2px 2px 5px white, -2px -2px 5px white;
+}
+
+h1, h2 {
+    font-family: 'Averia Libre', cursive;
+}
+
+p {
+  font-family: 'Raleway', helvetica, arial, sans-serif;
+}
+
+a {
+  font-family: 'Lato', helvetica, arial, sans-serif;
+}
+
+.google-btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  background: #007ACC;
+  line-height: 2em;
 }
