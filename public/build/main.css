@@ -44,6 +44,9 @@ body {
   line-height: 20px;
   font-family: 'Lato', helvetica, arial, sans-serif;*/
 }
+a {
+  /*color: #e6f5ff;*/
+}
 
 /**
  * application layout styles
@@ -101,6 +104,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 @media (max-width: 768px) {
   .styles__headerTop___1nOUF {
@@ -147,7 +151,8 @@ body {
   right: 0px;
   width: 240px;
   background-color: white;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #007ACC;
+  box-shadow: 4px 3px #e8e8e8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,7 +171,7 @@ body {
 }
 .styles__subMenuItem___2BvtS {
   width: 100%;
-  color: #999;
+  color: #333;
   text-decoration: none;
   text-align: center;
   line-height: 32px;
@@ -229,22 +234,25 @@ button {
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #007acc;
+  margin: 2px 5px;
 }
 .styles__default___13Kkj {
-  color: #999;
+  color: #333;
   transition: color 0.3s;
 }
 .styles__default___13Kkj:hover {
   color: #000;
 }
 .styles__outline___297he {
-  color: #999;
+  color: #333;
   border: 1px solid #e8e8e8;
   transition: color 0.3s, border 0.3s;
 }
 .styles__outline___297he:hover {
   color: #000;
-  border: 1px solid #999;
+  border: 1px solid #333;
 }
 .styles__fullWidth___Rgp9J {
   width: 100%;
@@ -262,6 +270,7 @@ button {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  margin-bottom: 10px;
 }
 .styles__logo___2DSq_ {
   width: 40px;
@@ -296,15 +305,16 @@ button {
   line-height: 38px;
   text-decoration: none;
   font-size: 14px;
-  color: #999;
+  font-weight: bold;
+  color: #333;
   user-select: none;
   transition: color 0.3s;
 }
 .styles__links___1yWSn:hover {
-  color: #000;
+  color: #007ACC;
 }
 .styles__linkActive___zVPQd {
-  color: #000;
+  color: #007ACC;
   background-color: #f9f9f9;
 }
 
@@ -403,7 +413,7 @@ button {
   font-weight: bold;
 }
 .styles__forumsContainer___1-fXm .styles__forum___3vWNo .styles__forumSlug___3lmHi {
-  color: #999;
+  color: #333;
   margin-left: 10px;
 }
 .styles__createForumContainer___1QcHi {
@@ -480,7 +490,7 @@ button {
   text-transform: uppercase;
 }
 .styles__sortList___3bpvk .styles__sort___1LO_K {
-  color: #999;
+  color: #333;
   display: inline-block;
   height: 30px;
   line-height: 30px;
@@ -502,9 +512,10 @@ button {
 .styles__loading___2DOZJ {
   font-size: 12px;
   letter-spacing: 0.5px;
-  color: #999;
+  color: #333;
   padding: 20px 0px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 /**
@@ -512,6 +523,7 @@ button {
  */
 .styles__container___3ipai {
   display: flex;
+  background-color: rgba(255, 255, 255, 0.6);
   flex-direction: column;
   padding: 10px;
   border-bottom: 1px solid #e8e8e8;
@@ -536,7 +548,7 @@ button {
 }
 .styles__posterInfo___1DRF- .styles__name___p6HFx {
   font-weight: 700;
-  color: #999;
+  color: #333;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -546,7 +558,7 @@ button {
 .styles__posterInfo___1DRF- .styles__gitHandler___1giVU {
   margin-left: 5px;
   text-decoration: none;
-  color: #999;
+  color: #333;
   transition: color 0.3s;
 }
 .styles__posterInfo___1DRF- .styles__gitHandler___1giVU .styles__gitIcon___3H_BL {
@@ -583,7 +595,7 @@ button {
   font-size: 12px;
   font-weight: 700;
   text-transform: lowercase;
-  color: #999;
+  color: #333;
 }
 .styles__postInfo____jz6p .styles__info___1du1l:first-child {
   margin-left: 0px;
@@ -598,7 +610,7 @@ button {
   margin-left: 10px;
   padding: 0 10px;
   background-color: #f9f9f9;
-  color: #999;
+  color: #333;
   font-size: 12px;
   line-height: 25px;
   user-select: none;
@@ -652,6 +664,7 @@ button {
 .styles__container___p5qvt {
   padding: 20px 10px 0px 10px;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .styles__infoContainer___3Sh3z {
   display: flex;
@@ -684,7 +697,7 @@ button {
 .styles__infoContainer___3Sh3z .styles__userInfo___1DOrN .styles__gitHandler___17wlM {
   margin-left: 15px;
   text-decoration: none;
-  color: #999;
+  color: #333333;
   transition: color 0.3s;
 }
 .styles__infoContainer___3Sh3z .styles__userInfo___1DOrN .styles__gitHandler___17wlM:hover {
@@ -695,7 +708,7 @@ button {
 }
 .styles__infoContainer___3Sh3z .styles__dateInfo___2ocAY {
   font-size: 13px;
-  color: #999;
+  color: #333;
 }
 @media (max-width: 768px) {
   .styles__infoContainer___3Sh3z .styles__dateInfo___2ocAY {
@@ -762,9 +775,11 @@ button {
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid #e8e8e8;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .styles__readOnlyContainer___1_aw0 {
   border: none;
+  background-color: transparent;
 }
 .styles__editorContainer___3Uf5O {
   padding: 10px 10px;
@@ -775,7 +790,7 @@ button {
 }
 .styles__editorContainer___3Uf5O .public-DraftEditorPlaceholder-root {
   position: absolute;
-  color: #999;
+  color: #333;
 }
 .styles__readOnlyEditorContainer___2vdF0 {
   padding: 0px;
@@ -809,7 +824,7 @@ button {
   user-select: none;
   cursor: pointer;
   text-transform: uppercase;
-  color: #999;
+  color: #333;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.5px;
@@ -881,7 +896,7 @@ button {
   font-weight: bold;
   text-align: center;
   padding: 30px 0px;
-  color: #999;
+  color: #333;
 }
 
 /**
@@ -892,6 +907,7 @@ button {
   margin-bottom: 10px;
   padding: 0px 10px 0px 10px;
   border: 1px solid #e8e8e8;
+  background-color: rgba(255, 255, 255, 0.6);
   /*border-bottom: none;
 
   &:last-child { border-bottom: 1px solid borderColor; }*/
@@ -931,7 +947,7 @@ button {
 .styles__infoContainer___3xSwn .styles__userInfo___32ied .styles__gitHandler___1LfML {
   margin-left: 15px;
   text-decoration: none;
-  color: #999;
+  color: #333;
   transition: color 0.3s;
 }
 .styles__infoContainer___3xSwn .styles__userInfo___32ied .styles__gitHandler___1LfML:hover {
@@ -943,7 +959,7 @@ button {
 .styles__infoContainer___3xSwn .styles__dateInfo___14IYv {
   font-size: 13px;
   line-height: 13px;
-  color: #999;
+  color: #333;
 }
 @media (max-width: 768px) {
   .styles__infoContainer___3xSwn .styles__dateInfo___14IYv {
@@ -973,7 +989,7 @@ button {
   padding: 10px 10px;
   display: flex;
   align-items: center;
-  color: #999;
+  color: #333;
   cursor: pointer;
   user-select: none;
   transition: color 0.3s;
@@ -991,7 +1007,7 @@ button {
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  color: #999;
+  color: #333;
 }
 .styles__errorMsg___3aFLd {
   margin-top: 20px;
@@ -1002,7 +1018,7 @@ button {
   text-align: center;
 }
 .styles__signInMsg___XSq22 {
-  color: #999;
+  color: #333;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
@@ -1085,7 +1101,7 @@ button {
 }
 .styles__signInMsg___1Gza3 {
   padding: 80px 0px;
-  color: #999;
+  color: #333;
   text-align: center;
 }
 .styles__postingMsg___1US7v {
