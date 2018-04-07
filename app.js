@@ -48,6 +48,10 @@ app.get('/forums', (req,res)=>{
    res.render('forums', {user: req.user});
 });
 
+app.get('/reviews', (req,res)=>{
+    res.render('reviews', {user: req.user})
+})
+
 // const serverConfigs = require('./config/serverConfig');
 
 require('./backend/express')(app, keys);
