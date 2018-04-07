@@ -35,16 +35,19 @@ app.use('/profile', profileRoutes);
 
 //create home route
 app.get('/', (req, res) =>{
-   res.render('home', { user: req.user});
+  req.session.returnTo = req.path;
+  res.render('home', { user: req.user});
 });
 
 //create meetups route
 app.get('/meetups', (req, res) =>{
+    req.session.returnTo = req.path;
     res.render('meetups', { user: req.user});
  });
 
 //create forum route
 app.get('/forums', (req,res)=>{
+   req.session.returnTo = req.path;
    res.render('forums', {user: req.user});
 });
 
