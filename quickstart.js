@@ -119,6 +119,14 @@ function listEvents(auth) {
       console.log('No upcoming events found.');
     } else {
       console.log('Upcoming 10 events:');
+      var stashMaps = events.map(event => {
+          return {
+              userId: req.user.id,
+              event: event.summary,
+              time: event.start.dateTime || event.start.date
+          }
+      });
+      // [{userid: 1212, event: 'hello', time: utctime},{},{}]
       for (var i = 0; i < events.length; i++) {
         var event = events[i];
         var start = event.start.dateTime || event.start.date;
