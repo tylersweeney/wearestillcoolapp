@@ -68,10 +68,16 @@ a {
   line-height: 2em;
 }
 
-img.fullscreen {
+img.fullscreen,
+iframe.fullscreen {
   width: 100%;
 }
 
 span.label {
   font-weight: bold;
+}
+
+iframe {
+  border: none;
+  height: 1000px;
 }
