@@ -29,12 +29,12 @@
         </header>
         <main>
             <img src="<%= user.thumbnail %>"/>
-            <p>Extra information about you.</p>
-            <p><%= user.gender %></p>
-            <p><%= user.email %></p>
-            <p><%= user.url %></p>
-            <p><%= user.org %></p>
-            <p><%= user.title %></p>
+            <h2>About me</h2>
+            <p><span class="label">Gender: </span><%= user.gender %></p>
+            <p><span class="label">Email address: </span><%= user.email %></p>
+            <p><span class="label">Homepage: </span><%= user.url %></p>
+            <p><span class="label">Organization: </span><%= user.org %></p>
+            <p><span class="label">Org Info: </span><%= user.title %></p>
         </main>
 
     </body>
